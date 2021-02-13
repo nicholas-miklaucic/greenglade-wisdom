@@ -152,7 +152,7 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
                         for (let speed of SPEEDS) {
                             let cardObjs = d3.select("#cards-" + speed.toLowerCase())
                                              .selectAll("div.column")
-                                             .data(d3.filter(cards, card => cardSpeed(card) === speed), d => d);
+                                             .data(d3.filter(cards, card => cardSpeed(card) === speed), d => d.cardCode);
                             cardObjs.enter()
                                     .append("div")
                                     .attr("class", "column is-12-desktop is-6-widescreen is-6-fullhd")
