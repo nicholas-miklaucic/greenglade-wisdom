@@ -1,5 +1,7 @@
-const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
+// const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
+const SET_URL = "http://0.0.0.0:8000";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
+const DEFAULT_HINT = "This is where explanatory text about what decks run this card and how to play around it will be.";
 
 function findCardName(cards, name) {
     for (let card of cards) {
@@ -58,16 +60,17 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
     d3.json(SET_URL + "/static/set1/en_us/data/set1-en_us.json", function(set1) {
         d3.json(SET_URL + "/static/set2/en_us/data/set2-en_us.json", function(set2) {
             d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set3) {
-                d3.json(SET_URL + "/static/hints.csv", function(hints) {
-                    console.log(hints);
+                d3.csv(SET_URL + "/static/hints.csv", function(hints) {
                     const ALL_CARDS = set1.concat(set2.concat(set3));
-                    let cardNames = hi
-                    let cards = d3.map(CARD_NAMES, name => findCardName(ALL_CARDS, name));
+                    console.log(hints);
+                    let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
 
                     function setHint(card, hints) {
-                        let hintText = hints[card.name];
-                        if (hintText === undefined) {
-                            hintText = hints["default"];
+                        let hintText = DEFAULT_HINT;
+                        for (let row of hints) {
+                            if (row["Card Name"] === card.name) {
+                                hintText = row["Hint Text"];
+                            }
                         }
                         document.getElementById("hint-area").textContent = hintText;
                     }

@@ -1,5 +1,4 @@
-Card Name,Card Text
-Default,This is where explanatory text about what decks run this card and how to play around it will be.
+Card Name,Hint Text
 Ranger's Resolve,"This is often run in Scouts, Bannermen, or other wide Demacia decks."
 Sharpsight,"You should assume this is in every Demacia deck you face. Keep in mind that it lets your opponent block Elusives: if you can't protect your e.g., Ezreal after this spell, don't attack with him."
 Riposte,"This is mostly run in Fiora decks, although it is sometimes seen in Scouts. This is Fiora's champion spell, so it's extra likely if she's on the field."
@@ -10,7 +9,7 @@ For The Fallen,Can be very low-cost if they drew it early. Run primarily in Elit
 Relentless Pursuit,This is very common in Demacia decks: don't commit all of your mana if they still have 3 and you'd lose to this card. It's most common on your attack turns so they get the Scout attack as well.
 Radiant Guardian,"Most common in Demacia/Targon decks, although it can be run in lots of Demacia decks. If they make weird suicide attacks at 5+ mana assume they're setting it up."
 Jettison,"If they have 19 or fewer cards, they can use Jettison to give +3/+3 to all of their Sea Monsters at Burst speed. If they have 23 or fewer, they can do the same with double Jettison."
-Make It Rain,"If they're blocking to set up lots of cards at 1 health, it's usually to set this up or to set up TF's Red Card. Also MF's champion spell."
+Make it Rain,"If they're blocking to set up lots of cards at 1 health, it's usually to set this up or to set up TF's Red Card. Also MF's champion spell."
 Mind Meld,Run mainly in Fizz/TF decks and a bit of a meme in anything else. Keep a rough tally of how many spells they've played and hold removal until they play it.
 Hired Gun,A common card to forget about and give unnecessary value. 
 Twisted Fate,"Red Card can be devastating if played into: they can only do this once while TF lives, so bait it out and then play your weak units. In the mirror, don't play your TF first if he'd die to Gold Card."
@@ -51,7 +50,7 @@ Cosmic Rays,"A rare pull from Aurelion Sol or Starshaping, but can cause blowout
 Supernova,A common pull from Aurelion Sol or Starshaping.
 The Serpent,It's easy to forget about 0 mana units.
 The Golden Sister,Probably the best pull from Solari/Lunari Priestess. Can be crushing against aggro decks so open attack before they play it.
-Twin Discplines,Not a very common card but one of the few good protection spells in Ionia. 
+Twin Disciplines,Not a very common card but one of the few good protection spells in Ionia.
 Flurry of Fists,"This card is still new, so expect the unexpected. Can be very scary when combined with Blade of the Exile."
 Spirit's Refuge,"Very common in Fiora/Shen lists. If you challenge all of your opponent's blockers, pull them to the end so lethal comes before they heal it back: they lose if that happens."
 Nopeify!,"If you only run one or two targets for this, they'll accumulate this card in their hand, so don't let them play it if you can."
@@ -63,11 +62,11 @@ Flash Freeze,Common in Freljord control decks and Ashe decks. Don't play into th
 Harsh Winds,"Common in Freljord control decks and Ashe decks. Save your combat tricks until after this is played to give it less value. Anivia's champion spell, and can be tutored with Entreat in those decks."
 Avalanche,"A defining card in Freljord control decks. Think of it like Ruination: don't let it scare you into never developing, but try to instead bait it out."
 Icequake ,"Trundle's champion spell, but not super common outside of that. Like an Avalanche on steroids."
-Feel the Rush,K-Pop is scary! Run in Freljord/SI control and also seen in Teemo/Ezreal/Sejuani decks.
+Feel The Rush,K-Pop is scary! Run in Freljord/SI control and also seen in Teemo/Ezreal/Sejuani decks.
 Suit Up!,Seeing new life in Fizz/TF decks. Remember it's 2 cost if they drew it last turn.
 Mystic Shot,P&Z the card! Ezreal's champion spell and a 3-of in most P&Z decks.
 Death Ray - Mk 1,"Viktor's champion spell, although uncommon outside of those decks."
-Get Excited! ,"Jinx's champion spell and common in other decks as well. This can summon Jury-Rig or Flame Chompers, but they can't block if you declare your attack first, unlike Rummage or Poro Cannon."
+Get Excited!,"Jinx's champion spell and common in other decks as well. This can summon Jury-Rig or Flame Chompers, but they can't block if you declare your attack first, unlike Rummage or Poro Cannon."
 Poro Cannon,A 0-mana discard spell. It's very common to forget that they can play Vision or Survival Skills at 0 mana with this card!
 Statikk Shock,"Mainly seen in Ezreal decks. Don't keep units at 1 health if possible, although it's not like those decks don't run other removal..."
 Thermogenic Beam,"A common card in P&Z control. The only high-end removal in the region: if you can bait this out it's really, really bad for your opponent."
@@ -81,4 +80,4 @@ Corina Veraza,Pretty rare: it's mainly run in SI/P&Z control decks.
 Vault Breaker,"A pretty bad card, which is why you don't expect it, but it's Vi's champion spell."
 Rising Spell Force,"Also a pretty bad card, which is why it feels even worse to lose to. Consider playing around it if you can."
 Trueshot Barrage,"One of the worst cards in the game, but it's a Flash of Brilliance pull that you should be aware of."
-Hextech Transmogulator,Basically only seen as a Flash of Brilliance pull. 
+Hextech Transmogulator,Basically only seen as a Flash of Brilliance pull.

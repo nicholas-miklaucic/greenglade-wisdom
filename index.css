@@ -2,6 +2,11 @@
     border-right: 2px dashed white;
 }
 
+#selection-area {
+    position: sticky;
+    top: 0;
+}
+
 #hint-area {
     border: 1px solid white;
 }
