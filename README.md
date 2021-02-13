@@ -31,6 +31,6 @@ This list tries to strike the right balance between "how common is this" and "ho
 Cards like Judgment aren't that common but are instant game winnners if allowed to be. Cards like Sharpsight can't win
 the game on the spot, but basically every Demacia deck will run it so it's worth playing against more.
 
-## What about that hint text?
-I'd like to have a little blurb for each card, but that's a lot of writing and so it's still a work in progress. The
-hints I currently have are stored in the hints.json file. Feel free to submit a pull request to add information!
+## How can I help?
+The cards I currently store, along with the hint text that shows, is stored in
+the `static/hints.csv` file. Edit that and submit a pull request!
