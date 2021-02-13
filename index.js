@@ -1,4 +1,4 @@
-const SET_URL = "http://raw.githubusercontent.com/nicholas-miklaucic/greenglade-wisdom/main";
+const SET_URL = "https://raw.githubusercontent.com/nicholas-miklaucic/greenglade-wisdom/main";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
 
 const CARD_NAMES = [
