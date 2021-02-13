@@ -1,81 +1,6 @@
 const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
 
-const CARD_NAMES = [
-    // Demacia
-    "Ranger's Resolve",
-    "Sharpsight",
-    "Riposte",
-    "Single Combat",
-    "Concerted Strike",
-    "Judgment",
-    "Relentless Pursuit",
-    "Radiant Guardian",
-    // Frejlord
-    "Brittle Steel",
-    "Troll Chant",
-    "Flash Freeze",
-    "Harsh Winds",
-    "Avalanche",
-    "Icequake ", // Riot pls why
-    // Ionia
-    "Twin Disciplines",
-    "Spirit's Refuge",
-    "Flurry of Fists",
-    "Nopeify!",
-    "Deny",
-    "Concussive Palm",
-    // P&Z
-    "Suit Up!",
-    "Mystic Shot",
-    "Get Excited!",
-    "Statikk Shock",
-    "Thermogenic Beam",
-    "Tri-beam Improbulator",
-    "Aftershock",
-    // Noxus
-    "Transfusion",
-    "Brothers' Bond",
-    "Ravenous Flock",
-    "Culling Strike",
-    "Scorched Earth",
-    "Decisive Maneuver",
-    "Death Lotus",
-    "Noxian Fervor",
-    "Decimate",
-    "Arachnoid Sentry",
-    // SI
-    "Mark of the Isles",
-    "Vile Feast",
-    "Black Spear",
-    "The Box",
-    "Withering Wail",
-    "Grasp of the Undying",
-    "Vengeance",
-    "The Harrowing",
-    "The Ruination",
-    "Frenzied Skitterer",
-    // Bilgewater
-    "Jettison",
-    "Make it Rain",
-    "Mind Meld",
-    "Twisted Fate",
-    "Devourer of the Depths",
-    // Targon
-    "Pale Cascade",
-    "Hush",
-    "Bastion",
-    "Moonlight Affliction",
-    "Gravitum",
-    "Crescent Strike",
-    "Meteor Shower",
-    "Falling Comet",
-    "Supernova",
-    "Cosmic Rays",
-    "The Serpent",
-    "The Golden Sister",
-];
-
 function findCardName(cards, name) {
     for (let card of cards) {
         if (card.name === name) {
@@ -133,9 +58,10 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
     d3.json(SET_URL + "/static/set1/en_us/data/set1-en_us.json", function(set1) {
         d3.json(SET_URL + "/static/set2/en_us/data/set2-en_us.json", function(set2) {
             d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set3) {
-                d3.json(SET_URL + "/static/hints.json", function(hints) {
+                d3.json(SET_URL + "/static/hints.csv", function(hints) {
                     console.log(hints);
                     const ALL_CARDS = set1.concat(set2.concat(set3));
+                    let cardNames = hi
                     let cards = d3.map(CARD_NAMES, name => findCardName(ALL_CARDS, name));
 
                     function setHint(card, hints) {
@@ -161,7 +87,6 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
                                     .on("mouseover", card => setHint(card, hints));
                             cardObjs.exit()
                                     .remove();
-
                         }
                     }
                     function update() {
