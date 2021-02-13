@@ -1,5 +1,4 @@
-// const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
-const SET_URL = "http://0.0.0.0:8000";
+const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
 const DEFAULT_HINT = "This is where explanatory text about what decks run this card and how to play around it will be.";
 
