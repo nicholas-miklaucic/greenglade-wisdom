@@ -1,0 +1,25 @@
+.card-col {
+    border-right: 2px dashed white;
+}
+
+#hint-area {
+    border: 1px solid white;
+}
+
+.region-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+input[type=number] {
+    width: 6rem;
+}
+
+.card-img:hover img {
+    transition-duration: 0.05s;
+    transform: scale(1.5);
+}
+
+#hint-area, #intro {
+    font-size: 0.9rem;
+}

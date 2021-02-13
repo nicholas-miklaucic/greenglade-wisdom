@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Greenglade Wisdom</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3-array.v2.min.js"></script>
+    </head>
+    <body class="">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+            your experience.
+            </p>
+        <![endif]-->
+        <div class="section">
+            <div class="columns">
+                <div class="column is-1">
+                </div>
+                <div class="column is-3">
+                    <h1 class="title is-1 has-text-light">Greenglade Wisdom</h1>
+                    <div class="content" id="intro">
+                        <h3 class="is-4 has-text-light">A Horror Story</h3>
+                        <p>
+                            It's late at night and you're on the grind. You're about to win against that <a href="https://lor.mobalytics.gg/en_us/decks/bvft879ul93kkfif7ta0">Fiora Butterfly deck everyone hates</a>,
+                            and you triumphantly push all of your attackers in and declare the attack. They block with
+                            Fiora; a spell appears on the stack. "But wait", you say to yourself, "what could they..."
+                        </p>
+                        <p>
+                            The spell is revealed: Judgment. <em>A battling ally
+                            strikes all battling enemies.</em> A lump forms in your
+                            throat. "But wait...", you murmur. "That's not fai—there's no
+                            way..."
+                        </p>
+                        <p>
+                            The day of judgment is here. The spell resolves. One after another, your units die agonizing
+                            deaths at Fiora's hand. Your Nexus is chopped up into a bunch of tiny pieces by some French
+                            girl's rapier. You lose.
+                        </p>
+                        <h3 class="is-4 has-text-light">How to Use This Tool</h3>
+                        <p>
+                            This tool makes it harder to throw games by showing you a hand-curated list of the most
+                            important cards to play around, by region and mana cost. At the top you can select the
+                            regions you're playing against and the mana your opponent has to filter the list.
+                        </p>
+                        <p>
+                            Want to fight about which cards should be here? Have a suggestion for this site? Have
+                            thoughts on the hint text? File an issue or pull request on this page's <a href="blah">GitHub.</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-8">
+                    <div class="columns">
+                        <div class="column is-4" id="hint-area">
+
+                        </div>
+                        <div class="column is-8">
+                            <div id="regions-select" class="columns is-multiline is-mobile">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns is-centered">
+                        <div class="column">
+
+                        </div>
+                        <div class="column is-narrow">
+                            <div class="field is-horizontal">
+                                <label class="label has-text-light" for="mana">Maximum Mana Cost</label>
+                            </div>
+                        </div>
+                        <div class="column is-narrow">
+                            <input type="number" name="manaNum" id="manaNum"
+                                   value="15" min="0" max="15" maxlength="3">
+                        </div>
+                        <div class="column">
+                            <input type="range" name="mana" id="mana"
+                                   value="15" min="0" max="15">
+                        </div>
+                        <div class="column">
+
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="columns is-multiline">
+                                <div class="column is-12 has-text-centered">
+                                    <h1 class="subtitle is-3 has-text-light">Burst</h1>
+                                </div>
+                            </div>
+                            <div id="cards-burst" class="columns is-multiline card-col">
+
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="columns is-multiline">
+                                <div class="column is-12 has-text-centered">
+                                    <h1 class="subtitle is-3 has-text-light">Fast</h1>
+                                </div>
+                            </div>
+                            <div id="cards-fast" class="columns is-multiline card-col">
+
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="columns is-multiline">
+                                <div class="column is-12 has-text-centered">
+                                    <h1 class="subtitle is-3 has-text-light">Slow</h1>
+                                </div>
+                            </div>
+                            <div id="cards-slow" class="columns is-multiline card-col">
+
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="columns is-multiline">
+                                <div class="column is-12 has-text-centered">
+                                    <h1 class="subtitle is-3 has-text-light">Unit</h1>
+                                </div>
+                            </div>
+                            <div id="cards-unit" class="columns is-multiline card-col">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer has-background-primary">
+            <div class="content has-text-centered">
+                <p>
+                    Created by Nicholas Miklaucic as an open source project.
+                    Think something should change? File an issue or pull request
+                    on this page's <a href="">GitHub.</a>
+                </p>
+                <p>
+                    Copyright Nicholas Miklaucic 2021.
+                </p>
+            </div>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
