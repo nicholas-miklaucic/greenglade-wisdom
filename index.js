@@ -1,4 +1,4 @@
-const SET_URL = "http://0.0.0.0:8000";
+const SET_URL = "http://raw.githubusercontent.com/nicholas-miklaucic/greenglade-wisdom/main";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
 
 const CARD_NAMES = [
@@ -39,6 +39,8 @@ const CARD_NAMES = [
     "Ravenous Flock",
     "Culling Strike",
     "Scorched Earth",
+    "Decisive Maneuver",
+    "Death Lotus",
     "Noxian Fervor",
     "Decimate",
     "Arachnoid Sentry",
