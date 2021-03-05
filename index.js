@@ -61,7 +61,6 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
             d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set3) {
                 d3.csv(SET_URL + "/static/hints.csv", function(hints) {
                     const ALL_CARDS = set1.concat(set2.concat(set3));
-                    console.log(hints);
                     let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
 
                     function setHint(card, hints) {
@@ -76,7 +75,6 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
 
 
                     function updateCards(cards) {
-                        console.log("Updating...")
                         for (let speed of SPEEDS) {
                             let cardObjs = d3.select("#cards-" + speed.toLowerCase())
                                              .selectAll("div.column")
@@ -92,7 +90,6 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
                         }
                     }
                     function update() {
-                        console.log("Hi");
                         newData = d3.filter(cards, card => d3.select("#" + card.regionRef + "-check").property("checked"));
                         newData = d3.filter(newData, card => card.cost <= d3.select("#mana").property("value"));
                         newData = newData.sort((a, b) => d3.ascending(a.cost, b.cost));
