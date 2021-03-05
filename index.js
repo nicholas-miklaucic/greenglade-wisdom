@@ -1,5 +1,5 @@
 const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
-const SPEEDS = ["Burst", "Fast", "Slow", "Unit"];
+const SPEEDS = ["Burst", "Fast", "Slow", "Unit", "Focus"];
 const DEFAULT_HINT = "This is where explanatory text about what decks run this card and how to play around it will be.";
 
 function findCardName(cards, name) {
@@ -54,7 +54,7 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
       .data(globals.regions.sort((a, b) => d3.ascending(a.name, b.name)))
       .enter()
       .append("div")
-      .attr("class", "column is-6-tablet is-3-desktop is-3-widescreen is-3-fullhd reg-col")
+      .attr("class", "column is-6-tablet is-4-desktop is-4-widescreen is-4-fullhd reg-col")
       .html(regionButton);
     d3.json(SET_URL + "/static/set1/en_us/data/set1-en_us.json", function(set1) {
         d3.json(SET_URL + "/static/set2/en_us/data/set2-en_us.json", function(set2) {
