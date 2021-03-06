@@ -59,47 +59,49 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
     d3.json(SET_URL + "/static/set1/en_us/data/set1-en_us.json", function(set1) {
         d3.json(SET_URL + "/static/set2/en_us/data/set2-en_us.json", function(set2) {
             d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set3) {
-                d3.csv(SET_URL + "/static/hints.csv", function(hints) {
-                    const ALL_CARDS = set1.concat(set2.concat(set3));
-                    let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
+                d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set4) {
+                    d3.csv(SET_URL + "/static/hints.csv", function(hints) {
+                        const ALL_CARDS = set1.concat(set2.concat(set3.concat(set4)));
+                        let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
 
-                    function setHint(card, hints) {
-                        let hintText = DEFAULT_HINT;
-                        for (let row of hints) {
-                            if (row["Card Name"] === card.name) {
-                                hintText = row["Hint Text"];
+                        function setHint(card, hints) {
+                            let hintText = DEFAULT_HINT;
+                            for (let row of hints) {
+                                if (row["Card Name"] === card.name) {
+                                    hintText = row["Hint Text"];
+                                }
+                            }
+                            document.getElementById("hint-area").textContent = hintText;
+                        }
+
+
+                        function updateCards(cards) {
+                            for (let speed of SPEEDS) {
+                                let cardObjs = d3.select("#cards-" + speed.toLowerCase())
+                                                 .selectAll("div.column")
+                                                 .data(d3.filter(cards, card => cardSpeed(card) === speed), d => d.cardCode);
+                                cardObjs.enter()
+                                        .append("div")
+                                        .attr("class", "column is-12-desktop is-6-widescreen is-6-fullhd")
+                                        .attr("id", card => card.cardCode)
+                                        .html(cardToHTML)
+                                        .on("mouseover", card => setHint(card, hints));
+                                cardObjs.exit()
+                                        .remove();
                             }
                         }
-                        document.getElementById("hint-area").textContent = hintText;
-                    }
-
-
-                    function updateCards(cards) {
-                        for (let speed of SPEEDS) {
-                            let cardObjs = d3.select("#cards-" + speed.toLowerCase())
-                                             .selectAll("div.column")
-                                             .data(d3.filter(cards, card => cardSpeed(card) === speed), d => d.cardCode);
-                            cardObjs.enter()
-                                    .append("div")
-                                    .attr("class", "column is-12-desktop is-6-widescreen is-6-fullhd")
-                                    .attr("id", card => card.cardCode)
-                                    .html(cardToHTML)
-                                    .on("mouseover", card => setHint(card, hints));
-                            cardObjs.exit()
-                                    .remove();
-                        }
-                    }
-                    function update() {
-                        newData = d3.filter(cards, card => d3.select("#" + card.regionRef + "-check").property("checked"));
-                        newData = d3.filter(newData, card => card.cost <= d3.select("#mana").property("value"));
-                        newData = newData.sort((a, b) => d3.ascending(a.cost, b.cost));
-                        updateCards(newData);
-                    };
-                    d3.selectAll(".reg-selector")
-                      .on("change", update);
-                    d3.select("#mana").on("change", update);
-                    update();
-                    setHint({"name": "default"}, hints);
+                        function update() {
+                            newData = d3.filter(cards, card => d3.select("#" + card.regionRef + "-check").property("checked"));
+                            newData = d3.filter(newData, card => card.cost <= d3.select("#mana").property("value"));
+                            newData = newData.sort((a, b) => d3.ascending(a.cost, b.cost));
+                            updateCards(newData);
+                        };
+                        d3.selectAll(".reg-selector")
+                          .on("change", update);
+                        d3.select("#mana").on("change", update);
+                        update();
+                        setHint({"name": "default"}, hints);
+                    });
                 });
             });
         });
