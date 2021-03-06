@@ -59,7 +59,7 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
     d3.json(SET_URL + "/static/set1/en_us/data/set1-en_us.json", function(set1) {
         d3.json(SET_URL + "/static/set2/en_us/data/set2-en_us.json", function(set2) {
             d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set3) {
-                d3.json(SET_URL + "/static/set3/en_us/data/set3-en_us.json", function(set4) {
+                d3.json(SET_URL + "/static/set4/en_us/data/set4-en_us.json", function(set4) {
                     d3.csv(SET_URL + "/static/hints.csv", function(hints) {
                         const ALL_CARDS = set1.concat(set2.concat(set3.concat(set4)));
                         let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
