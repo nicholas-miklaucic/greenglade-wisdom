@@ -1,3 +1,4 @@
+// const SET_URL = "http://0.0.0.0:8000";
 const SET_URL = "https://nicholas-miklaucic.github.io/greenglade-wisdom";
 const SPEEDS = ["Burst", "Fast", "Slow", "Unit", "Focus"];
 const DEFAULT_HINT = "This is where explanatory text about what decks run this card and how to play around it will be.";
@@ -62,7 +63,9 @@ d3.json(SET_URL + "/static/global/en_us/data/globals-en_us.json", function(globa
                 d3.json(SET_URL + "/static/set4/en_us/data/set4-en_us.json", function(set4) {
                     d3.csv(SET_URL + "/static/hints.csv", function(hints) {
                         const ALL_CARDS = set1.concat(set2.concat(set3.concat(set4)));
-                        let cards = d3.map(hints, row => findCardName(ALL_CARDS, row["Card Name"]));
+                        let cards = d3.map(
+                            d3.filter(hints, row => row["Card Name"][0] !== "_"), 
+                            row => findCardName(ALL_CARDS, row["Card Name"]));
 
                         function setHint(card, hints) {
                             let hintText = DEFAULT_HINT;
